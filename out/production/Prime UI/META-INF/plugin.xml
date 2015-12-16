@@ -1,0 +1,41 @@
+<idea-plugin version="2">
+    <id>com.prime.idea.PrimeUI</id>
+    <name>Prime UI</name>
+    <version>1.0</version>
+    <vendor email="leviothano@gmail.com" url="http://prime-developers.ru">Prime</vendor>
+
+    <description><![CDATA[
+      Prime UI
+    ]]></description>
+
+    <change-notes><![CDATA[
+
+    ]]>
+    </change-notes>
+
+    <idea-version since-build="141.0"/>
+
+    <depends>com.intellij.modules.lang</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <editorTabColorProvider implementation="com.prime.idea.laf.PrimeEditorTabColor"/>
+        <iconProvider implementation="com.prime.idea.IconProvider"/>
+    </extensions>
+
+    <application-components>
+        <component>
+            <implementation-class>com.prime.idea.PrimeTheme</implementation-class>
+        </component>
+        <component>
+            <implementation-class>com.prime.idea.laf.PrimeTabsPainterPatcher</implementation-class>
+        </component>
+        <component>
+            <implementation-class>com.prime.idea.IconReplacer</implementation-class>
+        </component>
+    </application-components>
+
+    <actions>
+        <!-- Add your actions here -->
+    </actions>
+
+</idea-plugin>
